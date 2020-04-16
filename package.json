@@ -1,0 +1,61 @@
+{
+  "name": "n8n-nodes-jsx-slack",
+  "version": "0.0.1",
+  "description": "Provide n8n nodes to post message, which is specialized with Block Kit using @speee-js/jsx-slack, to Slack.",
+  "homepage": "https://github.com/Tei1988",
+  "author": {
+    "name": "tei1988",
+    "email": "tei1988+npm@grifola.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tei1988/n8n-nodes-jsx-slack.git"
+  },
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "resource-copy": "node_modules/.bin/cpx resources/slack.png dist/nodes/",
+    "format": "node_modules/.bin/prettier '**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}' --write",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run-script build && npm run-script resource-copy"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
+  "keywords": [
+    "n8n",
+    "slack",
+    "block kit",
+    "jsx-slack"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120,
+    "trailingComma": "es5"
+  },
+  "n8n": {
+    "nodes": [
+      "dist/nodes/JSXSlack.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.11.1",
+    "@types/request-promise-native": "^1.0.17",
+    "cpx": "^1.5.0",
+    "npm-check-updates": "^4.1.2",
+    "prettier": "^2.0.4",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@speee-js/jsx-slack": "^2.0.0-beta.0",
+    "express": "^4.17.1",
+    "n8n-core": "^0.31.0",
+    "n8n-workflow": "^0.28.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.8"
+  }
+}

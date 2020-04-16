@@ -1,6 +1,6 @@
 {
   "name": "@tei1988/n8n-nodes-jsx-slack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provide n8n nodes to post message, which is specialized with Block Kit using @speee-js/jsx-slack, to Slack.",
   "homepage": "https://github.com/Tei1988",
   "author": {
